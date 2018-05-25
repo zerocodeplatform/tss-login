@@ -20,10 +20,15 @@
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.5.4",
+    "primeng": "^6.0.0-alpha.1",
     "rxjs": "^6.0.0",
     "tss-img-lib": "0.0.4",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@angular/flex-layout": "5.0.0-beta.14",
+    "@angular/cdk": "6.1.0",
+    "rxjs-compat": "6.2.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.2",

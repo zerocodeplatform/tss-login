@@ -1,3 +1,23 @@
-<p>
-    login works!
-</p>
+<div class="form-page" fxLayout="column" fxFill fxLayoutAlign="center start">      
+        <form fxLayout="column" (ngSubmit)="f.form.valid && login(f.form.value,f.form.valid)" #f="ngForm" novalidate>
+          
+          <h1>{{options.title || 'Login'}}</h1>
+      
+          <div class="form-field ui-float-label">
+            <input id="username" pInputText type="text" size="30" [(ngModel)]="user.userName" name="username" #username="ngModel" required>
+            <label for="username">Username</label>
+            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+          </div>
+          <div class="form-field ui-float-label">
+            <input id="password" type="password" size="30" pInputText [(ngModel)]="user.password" name="password" #password="ngModel"
+              required>
+            <label for="password">Password</label>
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+          </div>
+          <div class="forgt-rem-div" fxLayout="row" fxLayoutAlign="space-between center">
+        
+        <!--   <a routerLink="/forgot-password">Forgot Password?</a> -->
+        </div>
+          <button class="btn-grade" pButton type="submit" [label]="options.btnLabel || 'Submit'"></button>
+        </form>
+      </div>

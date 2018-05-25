@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AdminServService } from 'projects/login/src/lib/admin/admin-serv.service';
+import { LoginService } from 'projects/login/src/public_api';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { AdminServService } from 'projects/login/src/lib/admin/admin-serv.servic
 })
 export class AppComponent {
   title = 'app';
-  constructor(private admin : AdminServService){
-  this.admin.start();
+  constructor(private logServ:LoginService){
+    //this.logServ.userData();
   }
 }
