@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   title:string;
 
   /**
-   * To store static user data in session storage n load
+   * To store static user data in session storage on load
    * 
    * @param loginServ 
    * @see LoginService
