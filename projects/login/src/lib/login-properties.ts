@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 
 export interface LoginProperties {
 name?:string; 
-displayName?:any;
-logo?:any;
+displayName?:string;
+logo?:string;
 /* logoAlternateText?:any;
 id?:any;
 description?:any;
@@ -40,7 +40,7 @@ callServer?:any;
 target?:any; */
 }
 
-@Injectable()
-export abstract class loginPropertiesService {
-    abstract getLoginProperties(): LoginProperties[];
+
+export  class loginPropertiesService implements LoginProperties{
+    constructor(name:string,displayName:string,logo:string){}
 }

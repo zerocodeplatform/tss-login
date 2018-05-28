@@ -1,24 +1,14 @@
 import { Injectable } from '@angular/core';
-import { loginPropertiesService, LoginProperties } from './login-properties';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService implements loginPropertiesService{
+export class LoginService{
 
   constructor() { }
   //To store session user data.
   sessionUserData: any;
-getLoginProperties(){
-  const loginProp: LoginProperties[] = [
-    {
-      name: 'secret',
-      displayName: 'All of my deepest, darkest secrets.',
-      logo: 'lib.txt'
-    }
-  ];
-  return loginProp;
-}
+
 /**
    * To set the user in session storage.
    * 
@@ -41,11 +31,11 @@ getLoginProperties(){
    * @param valid 
    * @since 25-05-2018
    */
-  validate(userName, password) {
+  validate(userName, password,data) {
     this.sessionUserData = JSON.parse(sessionStorage.getItem("userData"));
     if (userName == this.sessionUserData[0].userName
       && password == this.sessionUserData[0].password) {
-      alert("Logged in Success");
+      alert(data.name+" Logged in successfully");
     } else {
       alert("Invalid credentials");
     }

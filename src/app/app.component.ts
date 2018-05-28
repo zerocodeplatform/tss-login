@@ -7,8 +7,14 @@ import { LoginService } from 'projects/login/src/public_api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  options:any={};
   title = 'app';
   constructor(private logServ:LoginService){
+    this.options={
+      "name":"vikram",
+      "displayName":"vricky",
+      "logo":"vik.txt"
+    }
     //this.logServ.userData();
   }
 }
