@@ -1,10 +1,9 @@
-import { Injectable } from "@angular/core";
 
 export interface LoginProperties {
 name?:string; 
 displayName?:string;
 logo?:string;
-/* logoAlternateText?:any;
+ logoAlternateText?:any;
 id?:any;
 description?:any;
 template?:any;
@@ -37,10 +36,5 @@ html?:any;
 jsCode?:any;
 call ?:any;
 callServer?:any;
-target?:any; */
-}
-
-
-export  class loginPropertiesService implements LoginProperties{
-    constructor(name:string,displayName:string,logo:string){}
+target?:any; 
 }

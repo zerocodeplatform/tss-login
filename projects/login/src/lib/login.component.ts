@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { LoginService } from './login.service';
-import { LoginProperties, loginPropertiesService } from './login-properties';
+import { LoginProperties} from './login-properties';
 
 @Component({
   selector: 'tss-login',
@@ -11,7 +11,7 @@ import { LoginProperties, loginPropertiesService } from './login-properties';
 })
 
 export class LoginComponent implements OnInit{
-  @Input() options: loginPropertiesService;
+  @Input() options: LoginProperties;
   loginForm: FormGroup = new FormGroup({});
   user: any = {};
   rememberMe = false;
