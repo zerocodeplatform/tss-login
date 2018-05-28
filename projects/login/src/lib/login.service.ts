@@ -1,14 +1,24 @@
 import { Injectable } from '@angular/core';
+import { loginPropertiesService, LoginProperties } from './login-properties';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class LoginService implements loginPropertiesService{
 
   constructor() { }
   //To store session user data.
   sessionUserData: any;
-
+getLoginProperties(){
+  const loginProp: LoginProperties[] = [
+    {
+      name: 'secret',
+      displayName: 'All of my deepest, darkest secrets.',
+      logo: 'lib.txt'
+    }
+  ];
+  return loginProp;
+}
 /**
    * To set the user in session storage.
    * 
