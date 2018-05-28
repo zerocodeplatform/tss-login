@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit{
    * @since 25-05-2018
    */
   ngOnInit() {
-   /*  this.btnLabel = this.options.btnLabel || 'Submit';
-    this.title = this.options.title || 'Login'; */
+    this.btnLabel = 'Submit';
+    this.title = 'Login';
     this.user = {}; 
   }
 
