@@ -1,7 +1,7 @@
 <div class="form-page" fxLayout="column" fxFill fxLayoutAlign="center start">      
         <form fxLayout="column" (ngSubmit)="f.form.valid && login(f.form.value,f.form.valid)" #f="ngForm" novalidate>
           
-          <h1>{{'Login'}}</h1>
+          <h1>{{options.title || 'Login'}}</h1>
       
           <div class="form-field ui-float-label">
             <input id="username" pInputText type="text" size="30" [(ngModel)]="user.userName" name="username" #username="ngModel" required>
@@ -18,6 +18,6 @@
         
         <!--   <a routerLink="/forgot-password">Forgot Password?</a> -->
         </div>
-          <button class="btn-grade" pButton type="submit" label= "Submit"></button>
+          <button class="btn-grade" pButton type="submit" [label]="options.btnLabel || 'Submit'"></button>
         </form>
       </div>

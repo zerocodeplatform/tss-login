@@ -37,4 +37,6 @@ jsCode?:any;
 call ?:any;
 callServer?:any;
 target?:any; 
+btnLabel?:any;
+title?:any;
 }
