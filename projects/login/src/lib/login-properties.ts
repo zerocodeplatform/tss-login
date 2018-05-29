@@ -1,16 +1,16 @@
 
 export interface LoginProperties {
-name?:string; 
-displayName?:string;
-logo?:string;
- logoAlternateText?:any;
-id?:any;
-description?:any;
-template?:any;
-width?:any;
-height?:any;
-positionX?:any;
-positionY?:any;
+name?:String; 
+displayName?:String;
+logo?:String;
+logoAlternateText?:String;
+id?:Number;
+description?:Text;
+template?:Text;
+width?:Number;
+height?:Number;
+positionX?:String;
+positionY?:String;
 padding?:any;
 language?:any;
 labelPosition?:any;

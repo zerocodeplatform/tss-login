@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from 'projects/login/src/public_api';
+import { LoginProperties } from 'dist/login/lib/login-properties';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,14 @@ import { LoginService } from 'projects/login/src/public_api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  options:any={};
+  options:LoginProperties;
   title = 'app';
   constructor(private logServ:LoginService){
     this.options={
-      "name":"vikram",
-      "displayName":"vricky",
-      "logo":"vik.txt"
+      name:'',
+      displayName:'vricky',
+      logo:'vik.txt',
+      dataset:''
     }
-    //this.logServ.userData();
   }
 }
